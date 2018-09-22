@@ -1,0 +1,54 @@
+section
+  section
+    h2.title Docker
+
+  section
+    h3.title Definição
+    blockquote.fragment.
+      Docker é uma plataforma para desenvolvedores e sysadmins construir, rodar e "entregar", aplicações, seja em laptops, VMs em datacenters ou na nuvem.
+
+  section
+    h3.title Como?
+    small.fragment Nós precisamos saber de alguns conceitos antes de começar com o docker:
+      br
+      br
+      ul
+        li IPs e portas
+        li Máquinas virtuais
+        li Edição de arquivos de configuração
+        li Familiaridade com idéias de dependências e processos de build de códigos
+        li Recursos de máquina como porcentagem de CPU, uso de RAM, etc.
+
+  section
+    h3.title Imagens
+    small.fragment Uma imagem de docker é um pacote de software leve, standalone Aque inclui tudo o que você precisa para rodar a sua aplicação: código, runtime, sistema operacional e todas as configurações necessárias.
+
+  section
+    h3.title Containers
+    small.fragment Uma imagem se torna um container quando é feito o docker run na engine do próprio docker.
+    p
+    small.fragment Disponível para Linux, Windows e MacOS, os containers sempre rodarão da mesma forma, indepente da infraestrutura.
+    p
+    small.fragment Containers isolam o software do ambiente e garantem que ele funcione de maneira uniforme apesar das diferenças entre os ambientes.
+
+  section
+    h3.title Características dos containers
+    small.fragment Padrão: O Docker criou um padrao de containers para que eles possam ser "portados" para qualquer ambiente
+    p
+    small.fragment Leve: Os containers compartilham o kernel do sistema operacional então não requer um sistema operacional por aplicação, reduzindo custos de servidor e licença.
+    p
+    small.fragment Seguro: Aplicações são seguras em containers e o Docker possui o uma a mais alta camada de isolamento da industria
+
+  section
+    h3.title Docker vs VMs
+    img(src="img/docker-vs-VM.png")
+
+  section
+    h3.title Volumes
+    small.fragment Volumes são mecanismos perferidos para persistir dados gerados e utilizados pelos containers.
+    p
+    small.fragment Volumes funcionam em Linux, Windows e MacOS.
+    p
+    small.fragment Os drivers de volume permitem que você guarde os seus volumes em hosts remotos ou provedores de cloud, para criptografia dos conteúdos ou para adicionar outras funcionalidades.
+    p
+    small.fragment Complementando os outros dois itens, volumes são geralmente a melhor escolha para persistir dados dos containers, porque um volume não aumenta o tamanho do container utilizando o volume, e o conteúdo do volume existe fora do ciclo de vida do container.
